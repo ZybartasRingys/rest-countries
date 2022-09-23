@@ -13,7 +13,6 @@ function Navbar() {
               </a>
             </div>
             <div className='col-5 d-flex justify-content-end'>
-              <img className='fa-moon' src='/design/moon.svg' alt='Moon' />
               <h2 className='dark' id='Dark-mode'>
                 Dark Mode
               </h2>

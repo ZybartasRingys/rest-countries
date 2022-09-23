@@ -12,7 +12,6 @@ function Card() {
   useEffect(() => {
     axios.get(baseURL).then((response) => {
       setCountries(response.data)
-      console.log(response.data)
     })
   }, [])
 
@@ -20,21 +19,21 @@ function Card() {
     <>
       <div>
         {countries.map((country, index) => {
-          const { title, population, region, capital, flag } = country
+          const { name, population, region, capital, flag } = country
           return (
-            <div className='card shadow  mb-5 bg-white rounded'>
+            <div className='card shadow  mb-5 bg-white rounded' key={index}>
               <div className='card-image'>
-                <img className='flag' src={flag} alt='Flag'></img>
+                <img className='image' src={flag} alt='flag' />
               </div>
               <div className='card-body'>
-                <h5 className='card-title mb-4'>{title}</h5>
+                <h5 className='card-title mb-4'>{name}</h5>
                 <p className='card-text'>
                   <span>Population:</span> {population}
                 </p>
-                <p class='card-text'>
+                <p className='card-text'>
                   <span>Region:</span> {region}
                 </p>
-                <p class='card-text'>
+                <p className='card-text'>
                   <span>Capital:</span> {capital}
                 </p>
               </div>
