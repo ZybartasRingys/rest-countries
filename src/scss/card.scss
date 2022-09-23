@@ -1,0 +1,46 @@
+@import './variables';
+
+/* Card */
+
+.card {
+  cursor: pointer;
+  border: none;
+
+  width: 200px;
+  height: 100%;
+}
+
+.card-image {
+  width: 100%;
+  height: 160px;
+
+  .flag {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 5px 5px 0 0 !important;
+  }
+}
+
+.card-body {
+  .card-title {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 26px;
+    color: $VeryDarkBlue2;
+  }
+  .card-text {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  span {
+    font-style: bold;
+    opacity: 1 !important;
+  }
+}
+
+/* Card end*/
