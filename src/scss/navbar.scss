@@ -1,0 +1,35 @@
+@import './variables';
+
+.navigation {
+  height: 80px;
+
+  .navigation-col {
+    height: 80px;
+  }
+
+  .where {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 20px;
+    color: $VeryDarkBlue2;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .dark {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: $VeryDarkBlue2;
+    cursor: pointer;
+  }
+
+  .fa-moon {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+}
