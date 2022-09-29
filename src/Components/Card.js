@@ -17,10 +17,10 @@ function Card() {
 
   return (
     <>
-      <div>
-        {countries.map((country, index) => {
-          const { name, population, region, capital, flag } = country
-          return (
+      {countries.map((country, index) => {
+        const { name, population, region, capital, flag } = country
+        return (
+          <div className='col-12 col-md-3 d-flex justify-content-center'>
             <div className='card shadow  mb-5 bg-white rounded' key={index}>
               <div className='card-image'>
                 <img className='image' src={flag} alt='flag' />
@@ -38,9 +38,9 @@ function Card() {
                 </p>
               </div>
             </div>
-          )
-        })}
-      </div>
+          </div>
+        )
+      })}
     </>
   )
 }

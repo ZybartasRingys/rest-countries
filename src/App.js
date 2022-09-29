@@ -11,7 +11,7 @@ function App() {
           <div className='col-12'>
             <SearchAndFilter />
           </div>
-          <div className='col-8 col-lg-12     mt-5'>
+          <div className='row mt-5'>
             <Card />
           </div>
         </div>
