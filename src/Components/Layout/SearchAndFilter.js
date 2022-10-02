@@ -1,12 +1,11 @@
 import React from "react";
 import "../../scss/searchAndFilter.scss";
 import { FaSearch } from "react-icons/fa";
-import { useState } from "react";
+import { useContext } from "react";
+import { Context } from "../../Context/StateContext";
 
-function SearchAndFilter({ name }) {
-  const [searchCountry, setSearchCountry] = useState("");
-  const [searchParams] = useState(["capital", "name"]);
-
+function SearchAndFilter() {
+  const [sCountry, setSCountry] = useContext(Context);
   return (
     <div className="container mt-3">
       <div className="row d-flex flex-column flex-xl-row justify-content-between">
@@ -22,8 +21,8 @@ function SearchAndFilter({ name }) {
               placeholder="Search for a country..."
               aria-label="Username"
               aria-describedby="basic-addon1"
-              value={searchCountry}
-              onChange={(e) => setSearchCountry(e.target.value)}
+              value={sCountry}
+              onChange={(e) => setSCountry(e.target.value)}
             ></input>
           </div>
         </div>
