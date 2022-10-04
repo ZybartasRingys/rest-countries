@@ -6,7 +6,7 @@ import Card from "./Components/Card";
 function App() {
   return (
     <Layout>
-      <div className="App container">
+      <div className="App container-fluid">
         <div className="row  d-flex flex-column align-items-center">
           <div className="col-12 ">
             <SearchAndFilter />
