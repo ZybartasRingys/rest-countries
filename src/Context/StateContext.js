@@ -24,14 +24,20 @@ export const ContextProvider = ({ children }) => {
 
   function searchAndFilter(countries) {
     return countries.filter((country) => {
-      {
-        console.log(country.region)
-      }
-      // jai select
-      if (country.region === filteredCountryRegion) {
+      /* Checking if the filteredCountryRegion is equal to 'All' and if it is, it returns the country.
+      If it is not, it checks if the country.region is not equal to the filteredCountryRegion. If it
+      is not, it returns the countries.some. */
+      if (filteredCountryRegion === 'All') {
         return country
-      } else if (filteredCountryRegion === 'All') {
-        return country
+      } else if (country.region !== filteredCountryRegion) {
+        return countries.some((newCountries) => {
+          return (
+            newCountries
+              .toString()
+              .toLowerCase()
+              .indexOf(filteredCountryRegion.toLowerCase()) > -1
+          )
+        })
       } else {
         return searchParam.some((newCountry) => {
           return (
@@ -46,32 +52,6 @@ export const ContextProvider = ({ children }) => {
       }
     })
   }
-
-  // function to filter country by selected region
-
-  // function filterCountries(countries) {
-  //   return countries.filter((country) => {
-  //     if (country.region === filteredCountry) {
-  //       return searchParam.some((newCountry) => {
-  //         return (
-  //           country[newCountry]
-  //             .toString()
-  //             .toLowerCase()
-  //             .indexOf(filteredCountry.toLowerCase()) > -1
-  //         )
-  //       })
-  //     } else if (filteredCountry === 'All') {
-  //       return searchParam.some((newCountry) => {
-  //         return (
-  //           country[newCountry]
-  //             .toString()
-  //             .toLowerCase()
-  //             .indexOf(filteredCountry.toLowerCase()) > -1
-  //         )
-  //       })
-  //     }
-  //   })
-  // }
 
   return (
     <Context.Provider
