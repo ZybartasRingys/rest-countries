@@ -7,6 +7,7 @@ export const ContextProvider = ({ children }) => {
   const [countries, setCountries] = useState([])
   const [searchInput, setSearchInput] = useState('')
   const [searchParam] = useState(['capital', 'name'])
+  const [filteredCountryRegion, setFilteredCountryRegion] = useState('All')
 
   /*  Country data endpoint  */
   const baseURL =
@@ -19,20 +20,58 @@ export const ContextProvider = ({ children }) => {
     })
   }, [])
 
-  function search(items) {
-    return items.filter((item) => {
-      return searchParam.some((newItem) => {
-        return (
-          /* Converting the item to a string, then to lowercase, then it is checking if the searchInput
+  // function so search countries by letters in capital and name
+
+  function searchAndFilter(countries) {
+    return countries.filter((country) => {
+      {
+        console.log(country.region)
+      }
+      // jai select
+      if (country.region === filteredCountryRegion) {
+        return country
+      } else if (filteredCountryRegion === 'All') {
+        return country
+      } else {
+        return searchParam.some((newCountry) => {
+          return (
+            /* Converting the item to a string, then to lowercase, then it is checking if the searchInput
          is in the item. */
-          item[newItem]
-            .toString()
-            .toLowerCase()
-            .indexOf(searchInput.toLowerCase()) > -1
-        )
-      })
+            country[newCountry]
+              .toString()
+              .toLowerCase()
+              .indexOf(searchInput.toLowerCase()) > -1
+          )
+        })
+      }
     })
   }
+
+  // function to filter country by selected region
+
+  // function filterCountries(countries) {
+  //   return countries.filter((country) => {
+  //     if (country.region === filteredCountry) {
+  //       return searchParam.some((newCountry) => {
+  //         return (
+  //           country[newCountry]
+  //             .toString()
+  //             .toLowerCase()
+  //             .indexOf(filteredCountry.toLowerCase()) > -1
+  //         )
+  //       })
+  //     } else if (filteredCountry === 'All') {
+  //       return searchParam.some((newCountry) => {
+  //         return (
+  //           country[newCountry]
+  //             .toString()
+  //             .toLowerCase()
+  //             .indexOf(filteredCountry.toLowerCase()) > -1
+  //         )
+  //       })
+  //     }
+  //   })
+  // }
 
   return (
     <Context.Provider
@@ -41,7 +80,9 @@ export const ContextProvider = ({ children }) => {
         setCountries,
         searchInput,
         setSearchInput,
-        search,
+        searchAndFilter,
+        filteredCountryRegion,
+        setFilteredCountryRegion,
       }}
     >
       {children}

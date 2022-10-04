@@ -4,9 +4,9 @@ import { useContext } from 'react'
 import { Context } from '../Context/StateContext'
 
 function Card() {
-  const { countries, search } = useContext(Context)
+  const { countries, searchAndFilter } = useContext(Context)
 
-  return search(countries).map((country) => {
+  return searchAndFilter(countries).map((country) => {
     const { name, population, region, capital, flag, numericCode } = country
 
     return (
