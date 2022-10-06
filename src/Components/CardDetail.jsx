@@ -1,9 +1,20 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
+import { useContext } from 'react'
+import { Context } from '../Context/StateContext'
 
-function CardDetail() {
+function CardDetail(numericCode) {
   const { id } = useParams()
-  return <div>CardDetail - {id}</div>
+
+  {
+    console.log(numericCode)
+  }
+
+  return (
+    <>
+      <div>{id}</div>
+    </>
+  )
 }
 
 export default CardDetail
