@@ -2,6 +2,8 @@ import "./App.scss";
 import Layout from "./Components/Layout/Layout";
 import SearchAndFilter from "./Components/Layout/SearchAndFilter";
 import Card from "./Components/Card";
+import { Route } from "react-router-dom";
+import CardDetail from "./Components/CardDetail";
 
 function App() {
   return (
