@@ -16,6 +16,9 @@ root.render(
         <Routes>
           <Route path='/' element={<App />}></Route>
           <Route path='/:id' element={<CardDetail />}></Route>
+
+          <Route path='/' element={<App />}></Route>
+          <Route path='/card/:id' element={<CardDetail />}></Route>
         </Routes>
       </Router>
     </ContextProvider>
