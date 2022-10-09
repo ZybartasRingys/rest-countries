@@ -1,4 +1,4 @@
-@import './variables';
+@import "./variables";
 
 .navigation {
   height: 80px;
@@ -20,16 +20,39 @@
   .dark {
     font-style: normal;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 16px;
     line-height: 16px;
     color: $VeryDarkBlue2;
     cursor: pointer;
   }
 
-  .fa-moon {
+  .moon {
     width: 16px;
     height: 16px;
     margin-right: 5px;
     cursor: pointer;
+  }
+}
+
+/* mobile  */
+@media only screen and (max-width: 767px) {
+  .where {
+    font-size: 14px !important;
+  }
+
+  .country-input {
+    margin-top: 30px;
+  }
+}
+
+/*  tablet  */
+@media only screen and (min-width: 768px) and (max-width: 1223px) {
+}
+
+/* desktop */
+
+@media only screen and (min-width: 1224px) and (max-width: 1440px) {
+  .country-input {
+    margin-top: 48px;
   }
 }

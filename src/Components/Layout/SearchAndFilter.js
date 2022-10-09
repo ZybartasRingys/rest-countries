@@ -20,9 +20,8 @@ function SearchAndFilter() {
 
               <input
                 type="text"
-                className="form-control  "
+                className="form-control"
                 placeholder="Search for a country..."
-                aria-label="Username"
                 aria-describedby="basic-addon1"
                 value={searchInput}
                 onChange={(e) => setSearchInput(e.target.value)}

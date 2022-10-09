@@ -1,8 +1,29 @@
 .form-control {
-  border: none !important;
   outline: none !important;
+  border: red !important;
 }
 
 .form-select {
   height: 48px;
+}
+
+/* mobile  */
+@media only screen and (max-width: 767px) {
+  .country-input {
+    margin-top: 30px;
+  }
+
+  .dark {
+    font-size: 12px !important;
+  }
+
+  .form-select {
+    margin-top: 40px;
+  }
+}
+
+@media only screen and (min-width: 1224px) and (max-width: 1440px) {
+  .form-select {
+    margin-top: 48px;
+  }
 }

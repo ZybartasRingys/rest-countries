@@ -21,34 +21,39 @@ export const ContextProvider = ({ children }) => {
 
   // function so search countries by letters in capital and name
 
-  function searchAndFilter(countries) {
-    return countries.filter((country) => {
-      /* Checking if the filteredCountryRegion is equal to 'All' and if it is, it returns the country.
+  function Filter(countries) {
+    return (
+      countries &&
+      countries.filter((country) => {
+        /* Checking if the filteredCountryRegion is equal to 'All' and if it is, it returns the country.
       If it is not, it checks if the country.region is not equal to the filteredCountryRegion. If it
       is not, it returns the countries.some. */
-      if (filteredCountryRegion === "All") {
-        return country;
-      } else if (country.region !== filteredCountryRegion) {
-        return countries.some((newCountries) => {
-          return (
-            newCountries
-              .toString()
-              .toLowerCase()
-              .indexOf(filteredCountryRegion.toLowerCase()) > -1
-          );
-        });
-      } else {
-        return searchParam.some((newCountry) => {
-          return (
-            /* Converting the item to a string, then to lowercase, then it is checking if the searchInput
-         is in the item. */
-            country[newCountry]
-              .toString()
-              .toLowerCase()
-              .indexOf(searchInput.toLowerCase()) > -1
-          );
-        });
-      }
+        if (filteredCountryRegion === "All") {
+          return country;
+        } else if (country.region !== filteredCountryRegion) {
+          return countries.some((newCountries) => {
+            return (
+              newCountries
+                .toString()
+                .toLowerCase()
+                .indexOf(filteredCountryRegion.toLowerCase()) > -1
+            );
+          });
+        }
+      })
+    );
+  }
+
+  function search(country) {
+    return searchParam.some((newCountry) => {
+      return (
+        /* Converting the item to a string, then to lowercase, then it is checking if the searchInput
+   is in the item. */
+        country[newCountry]
+          .toString()
+          .toLowerCase()
+          .indexOf(searchInput.toLowerCase()) > -1
+      );
     });
   }
 
@@ -59,7 +64,7 @@ export const ContextProvider = ({ children }) => {
         setCountries,
         searchInput,
         setSearchInput,
-        searchAndFilter,
+        Filter,
         filteredCountryRegion,
         setFilteredCountryRegion,
       }}

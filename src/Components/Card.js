@@ -5,9 +5,9 @@ import { Context } from "../Context/StateContext";
 import { Link } from "react-router-dom";
 
 function Card() {
-  const { countries, searchAndFilter } = useContext(Context);
+  const { countries, Filter } = useContext(Context);
 
-  return searchAndFilter(countries).map((country) => {
+  return Filter(countries).map((country) => {
     const { name, population, region, capital, flag, numericCode } = country;
 
     return (
