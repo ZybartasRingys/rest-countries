@@ -1,18 +1,15 @@
 import React from "react";
-import "../scss/card.scss";
-import { useParams } from "react-router-dom";
 import { useContext } from "react";
 import { Context } from "../Context/StateContext";
 import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 
-function CardDetail() {
+function BorderCountry() {
   const { countries } = useContext(Context);
   const { id } = useParams();
+
   return countries?.map((country) => {
-    {
-      console.log(country);
-    }
     const {
       flag,
       name,
@@ -25,8 +22,9 @@ function CardDetail() {
       subregion,
       currencies,
       borders,
+      alpha3Code,
     } = country;
-    if (id === name) {
+    if (id === alpha3Code) {
       return (
         <div className="container border" key={numericCode}>
           <div className="row">
@@ -87,4 +85,4 @@ function CardDetail() {
   });
 }
 
-export default CardDetail;
+export default BorderCountry;

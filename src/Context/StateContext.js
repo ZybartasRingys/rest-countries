@@ -10,8 +10,7 @@ export const ContextProvider = ({ children }) => {
   const [filteredCountryRegion, setFilteredCountryRegion] = useState("All");
 
   /*  Country data endpoint  */
-  const baseURL =
-    "https://restcountries.com/v2/alpha?codes=DEU,USA,BRA,ISL,AFG,ALA,ALB,DZA";
+  const baseURL = "https://restcountries.com/v2/all";
 
   /* A hook that is used to fetch data. */
   useEffect(() => {
