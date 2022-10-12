@@ -29,17 +29,27 @@ export const ContextProvider = ({ children }) => {
           return country
         } else if (filteredCountryRegion === 'All') {
           return country
+        } else if (searchInput === '') {
+          return country
+        } else {
+          return country.name
+            .toLowerCase()
+            .includes(searchInput.toLocaleLowerCase())
         }
       })
     )
   }
 
-  let Search = () => {
-    countries.map((country) => {
-      return country.filter((filteredCountry) => {
-        return filteredCountry.toLowerCase().includes(searchInput.toLowerCase())
+  let Search = (countries) => {
+    return (
+      countries &&
+      countries.filter((country) => {
+        if (searchInput === '') {
+          return country
+        } else {
+        }
       })
-    })
+    )
   }
 
   return (
