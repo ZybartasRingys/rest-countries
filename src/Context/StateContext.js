@@ -34,6 +34,14 @@ export const ContextProvider = ({ children }) => {
     )
   }
 
+  let Search = () => {
+    countries.map((country) => {
+      return country.filter((filteredCountry) => {
+        return filteredCountry.toLowerCase().includes(searchInput.toLowerCase())
+      })
+    })
+  }
+
   return (
     <Context.Provider
       value={{
@@ -42,6 +50,7 @@ export const ContextProvider = ({ children }) => {
         searchInput,
         setSearchInput,
         Filter,
+        Search,
         filteredCountryRegion,
         setFilteredCountryRegion,
       }}
