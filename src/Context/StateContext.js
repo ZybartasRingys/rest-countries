@@ -19,6 +19,29 @@ export const ContextProvider = ({ children }) => {
     });
   }, []);
 
+  /**
+   * It takes a searchValue as an argument, sets the searchInput state to the searchValue, and then
+   * filters the countries array based on the searchValue.
+   *
+   * If the searchValue is empty, it sets the filtered state to the countries array.
+   *
+   * If the searchValue is not empty, it filters the countries array based on the searchValue.
+   *
+   * The filteredCountries variable is an array of objects that match the searchValue.
+   *
+   * The filtered state is set to the filteredCountries array.
+   *
+   * The filtered state is used to render the countries in the table.
+   *
+   * The searchCountries function is called when the user types in the search input.
+   *
+   * The searchCountries function is called in the onChange event handler of the search input.
+   *
+   * The onChange event handler is in the Search component.
+   *
+   * The Search component is in the
+   * @param searchValue - the value of the input field
+   */
   const searchCountries = (searchValue) => {
     setSearchInput(searchValue);
 

@@ -38,10 +38,10 @@ function Card() {
           )}
         </div>
       ) : (
-        <div className="col-12 col-md-6 col-xl-3 d-flex justify-content-center ">
+        <div className="col-12 col-md-6 col-xl-12 border d-flex justify-content-center ">
           {countries.map(
             ({ name, numericCode, flag, population, region, capital }) => (
-              <div className="col-12 col-md-6 col-xl-3 d-flex justify-content-center ">
+              <div className="col-12 col-md-6 col-xl-12 d-flex justify-content-center ">
                 <Link className="link" key={numericCode} to={`/${name}`}>
                   <div className="card shadow  mb-5 bg-white rounded">
                     <div className="card-image">
