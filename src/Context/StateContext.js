@@ -1,56 +1,39 @@
-import React, { createContext, useState, useEffect } from 'react'
-import axios from 'axios'
+import React, { createContext, useState, useEffect } from "react";
+import axios from "axios";
 
-export const Context = createContext()
+export const Context = createContext();
 
 export const ContextProvider = ({ children }) => {
-  const [countries, setCountries] = useState([])
-  const [searchInput, setSearchInput] = useState('')
-  const [searchParam] = useState(['capital', 'name'])
-  const [filteredCountryRegion, setFilteredCountryRegion] = useState('All')
+  const [countries, setCountries] = useState([]);
+  const [searchInput, setSearchInput] = useState("");
+  const [filtered, setFiltered] = useState([]);
+  const [filteredCountryRegion, setFilteredCountryRegion] = useState("All");
 
   /*  Country data endpoint  */
-  const baseURL = 'https://restcountries.com/v2/all'
+  const baseURL = "https://restcountries.com/v2/all";
 
   /* A hook that is used to fetch data. */
   useEffect(() => {
     axios.get(baseURL).then((response) => {
-      setCountries(response.data)
-    })
-  }, [])
+      setCountries(response.data);
+    });
+  }, []);
 
-  // function so search countries by letters in capital and name
+  const searchCountries = (searchValue) => {
+    setSearchInput(searchValue);
 
-  let Filter = (countries) => {
-    return (
-      countries &&
-      countries.filter((country) => {
-        if (country.region === filteredCountryRegion) {
-          return country
-        } else if (filteredCountryRegion === 'All') {
-          return country
-        } else if (searchInput === '') {
-          return country
-        } else {
-          return country.name
-            .toLowerCase()
-            .includes(searchInput.toLocaleLowerCase())
-        }
-      })
-    )
-  }
-
-  let Search = (countries) => {
-    return (
-      countries &&
-      countries.filter((country) => {
-        if (searchInput === '') {
-          return country
-        } else {
-        }
-      })
-    )
-  }
+    if (searchInput) {
+      const filteredCountries = countries.filter((country) =>
+        Object.values(country)
+          .join("")
+          .toLowerCase()
+          .includes(searchValue.toLowerCase())
+      );
+      setFiltered(filteredCountries);
+    } else {
+      setFiltered(countries);
+    }
+  };
 
   return (
     <Context.Provider
@@ -59,13 +42,14 @@ export const ContextProvider = ({ children }) => {
         setCountries,
         searchInput,
         setSearchInput,
-        Filter,
-        Search,
+        searchCountries,
+        filtered,
+        setFiltered,
         filteredCountryRegion,
         setFilteredCountryRegion,
       }}
     >
       {children}
     </Context.Provider>
-  )
-}
+  );
+};
