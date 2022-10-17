@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { Context } from "../../Context/StateContext";
 
 function SearchAndFilter() {
-  const { searchInput, searchCountries, setFilteredCountryRegion } =
+  const { inputRef, searchCountries, filteredByRegion, regionRef } =
     useContext(Context);
 
   return (
@@ -23,14 +23,15 @@ function SearchAndFilter() {
                 className="form-control"
                 placeholder="Search for a country..."
                 aria-describedby="basic-addon1"
-                value={searchInput}
+                ref={inputRef}
                 onChange={(e) => searchCountries(e.target.value)}
               ></input>
             </div>
           </div>
           <div className="col-6 col-md-4 col-xl-2 float-left  ">
             <select
-              onChange={(e) => setFilteredCountryRegion(e.target.value)}
+              ref={regionRef}
+              onChange={(e) => filteredByRegion(e.target.value)}
               className="form-select"
               aria-label="Default select example"
             >
