@@ -1,5 +1,4 @@
 import './App.scss'
-
 import SearchAndFilter from './Components/Layout/SearchAndFilter'
 import Card from './Components/Card'
 
