@@ -26,6 +26,15 @@ export const ContextProvider = ({ children }) => {
     })
   }
 
+  const darkMode = () => {
+    console.log('hi')
+  }
+
+  /**
+   * It takes the value of the input field, and if it's not empty, it fetches the data from the API and
+   * sets the state to the data. If the input field is empty, it fetches the data from the API and sets
+   * the state to the data.
+   */
   const searchCountries = () => {
     const searchValue = inputRef.current.value
     if (searchValue.trim()) {
@@ -46,6 +55,9 @@ export const ContextProvider = ({ children }) => {
     }
   }
 
+  /**
+   * It fetches the data from the API and sets the state of the countries to the data fetched.
+   */
   const filteredByRegion = () => {
     const selectValue = regionRef.current.value
     if (selectValue.trim()) {
@@ -89,6 +101,7 @@ export const ContextProvider = ({ children }) => {
         regionRef,
         inputRef,
         noCountries,
+        darkMode,
       }}
     >
       {children}

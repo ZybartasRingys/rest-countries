@@ -10,7 +10,7 @@ function Card() {
   return (
     <>
       <div className='container d-flex'>
-        <div className='row'>
+        <div className='row d-flex justify-content-center'>
           {!noCountries ? (
             countries.map(
               ({ name, numericCode, flag, population, region, capital }) => (
@@ -26,13 +26,13 @@ function Card() {
                       <div className='card-body text-left'>
                         <h5 className='card-title mb-4'>{name}</h5>
                         <p className='card-text'>
-                          <span>Population:</span> {population}
+                          <span className='bold'>Population:</span> {population}
                         </p>
                         <p className='card-text'>
-                          <span>Region:</span> {region}
+                          <span className='bold'>Region:</span> {region}
                         </p>
                         <p className='card-text'>
-                          <span>Capital:</span> {capital}
+                          <span className='bold'>Capital:</span> {capital}
                         </p>
                       </div>
                     </div>

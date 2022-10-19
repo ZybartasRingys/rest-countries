@@ -44,8 +44,13 @@
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
-    line-height: 16px;
+    margin-bottom: 10px;
   }
+
+  p {
+    font-size: 12px !important;
+  }
+
   span {
     font-style: bold;
     opacity: 1 !important;
@@ -78,7 +83,7 @@
 
 .bold {
   font-size: 14px !important;
-  line-height: 32px;
+  line-height: 16px;
   color: #111517;
   margin-right: 5px;
 }
