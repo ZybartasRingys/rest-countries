@@ -31,8 +31,8 @@ function BorderCountry() {
           <div className="container border" key={numericCode}>
             <div className="row">
               <div className="col-12 border">
-                <div className="col-12  mb-5 mt-3">
-                  <Link className="back-link" to="/">
+                <div className="col-12 back-link mb-5 mt-3">
+                  <Link to="/">
                     <AiOutlineArrowLeft /> Back
                   </Link>
                 </div>
@@ -66,11 +66,12 @@ function BorderCountry() {
                   <div className="col">
                     <h2>border Co-untries:</h2>
                   </div>
-                  <div className="col">
+                  <div className="col-12 mb-5 mt-4 d-flex justify-content-betwee">
                     {borders &&
                       borders.map((borderCountry) => {
                         return (
                           <Link
+                            className="back-link"
                             key={borderCountry}
                             to={`/borders/${borderCountry}`}
                           >
