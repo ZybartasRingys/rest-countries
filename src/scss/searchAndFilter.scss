@@ -1,12 +1,18 @@
-.form-control {
-  outline: none !important;
-  border: red !important;
-}
-
 .form-select {
   height: 48px;
+  border: 1px solid red !important;
 }
 
+.form-control {
+  border: none !important;
+  outline: none !important;
+}
+
+.form-control:focus {
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
 /* mobile  */
 @media only screen and (max-width: 767px) {
   .country-input {

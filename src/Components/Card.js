@@ -23,8 +23,8 @@ function Card() {
                       <div className='card-image'>
                         <img className='image' src={flag} alt='flag' />
                       </div>
-                      <div className='card-body text-left'>
-                        <h5 className='card-title mb-4'>{name}</h5>
+                      <div className='card-body text-left mb-3'>
+                        <h5 className='card-title mb-4 mt-2'>{name}</h5>
                         <p className='card-text'>
                           <span className='bold'>Population:</span> {population}
                         </p>
