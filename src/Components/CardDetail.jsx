@@ -28,16 +28,20 @@ function CardDetail() {
       }) => {
         if (id === name) {
           return (
-            <div className='container border' key={numericCode}>
+            <div
+              className='container-fluid card-detail-container '
+              key={numericCode}
+            >
               <div className='row d-flex  justify-content-center'>
-                <div className='col-12 d-flex flex-column flex-md-row justify-content-center align-items-center'>
-                  <div className='col-11 col-md-6 mt-4'>
-                    <div className='col-3 back-link mb-5 mt-3'>
+                <div className='col-12 col-md-12 d-flex flex-column flex-md-column justify-content-center  align-items-center '>
+                  <div className='col-11 col-md-11 d-flex flex-column justify-content-center mt-4'>
+                    <div className='back-link mb-5'>
                       <Link to='/'>
                         <AiOutlineArrowLeft /> Back
                       </Link>
                     </div>
-                    <div className='col-12 mb-5'>
+
+                    <div className='col-12 col-md-11 d-flex justify-content-center  mb-5'>
                       <img
                         className='detail-card-image'
                         src={flag}
@@ -45,9 +49,9 @@ function CardDetail() {
                       />
                     </div>
                   </div>
-                  <div className='col-12 col-md-6 px-3'>
-                    <div className='col-12 d-flex flex-column flex-md-row'>
-                      <div className='col-8 col-md-6  '>
+                  <div className='col-12 col-md-12 px-3 d-flex flex-column   flex-md-row '>
+                    <div className='col-12 col-md-6 d-flex flex-column flex-md-row '>
+                      <div className='col-8 col-md-8  '>
                         <h2 className='mb-4 '>{name}</h2>
                         <p>
                           <span className='bold'>Native name:</span>
@@ -70,7 +74,7 @@ function CardDetail() {
                           {capital}
                         </p>
                       </div>
-                      <div className='col-12 mt-4'>
+                      <div className='col-12 col-md-4 mt-4'>
                         <p>
                           <span className='bold'>Top Level Domain:</span>
                           {topLevelDomain}
@@ -87,25 +91,24 @@ function CardDetail() {
                         </div>
                       </div>
                     </div>
-                    <div className='col-12 mt-4'>
-                      <div className='col-12'>
+                    <div className='col-12 col-md-6 mt-4 '>
+                      <div className='col-12 col-md-12 '>
                         <h2 className='borders-heading'>Border Co-untries:</h2>
                       </div>
-                      <div className='col-12  mb-5 mt-3 d-flex justify-content-between'>
-                        {borders &&
-                          borders.map((borderCountry) => {
-                            return (
-                              <div className='container' key={borderCountry}>
-                                <div className='row d-flex'>
-                                  <div className='col-12 col-md-6 link-container d-flex justify-content-center align-items-center border border-link'>
-                                    <Link to={`/borders/${borderCountry}`}>
-                                      {borderCountry}
-                                    </Link>
-                                  </div>
+
+                      <div className='row d-flex '>
+                        <div className='col-12 col-md-9 d-flex mb-5'>
+                          {borders &&
+                            borders.map((borderCountry) => {
+                              return (
+                                <div className='col-3 col-md-4 border link-container d-flex justify-content-center align-items-center  border-link'>
+                                  <Link to={`/borders/${borderCountry}`}>
+                                    {borderCountry}
+                                  </Link>
                                 </div>
-                              </div>
-                            )
-                          })}
+                              )
+                            })}
+                        </div>
                       </div>
                     </div>
                   </div>

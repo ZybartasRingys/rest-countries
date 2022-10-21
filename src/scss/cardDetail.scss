@@ -18,3 +18,14 @@
 p {
   font-size: 12px;
 }
+
+@media only screen and (min-width: 767px) and (max-width: 1224px) {
+  .card-detail-container {
+    margin-top: 50px;
+  }
+
+  .detail-card-image {
+    width: 560px;
+    height: 401px;
+  }
+}

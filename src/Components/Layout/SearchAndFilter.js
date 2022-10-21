@@ -12,7 +12,7 @@ function SearchAndFilter() {
     <div className='container-fluid mt-3'>
       <div className='row d-flex flex-column flex-xl-row justify-content-center '>
         <div className='col-12 col-xl-11  d-flex flex-column flex-xxl-row justify-content-between'>
-          <div className='col-12 col-md-6 col-xl-4 d-flex'>
+          <div className='col-12 col-md-6 col-xl-4 d-flex border search-inputs'>
             <div className='icon'>
               <FaSearch />
             </div>

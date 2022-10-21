@@ -15,8 +15,8 @@ main {
 }
 
 .back-link {
-  width: 104px;
-  height: 32px;
+  width: 104px !important;
+  height: 32px !important;
   border-radius: 2px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   font-size: 10px;
@@ -37,18 +37,16 @@ main {
 }
 
 .border-link {
-  // width: 98px !important;
-  // height: 28px !important;
   font-size: 10px;
   text-align: center;
-  margin-right: 7px;
+  margin-right: 3px !important;
 
   a {
     text-decoration: none;
     color: black;
-  }
 
-  &:hover {
-    color: black;
+    &:hover {
+      color: black;
+    }
   }
 }
