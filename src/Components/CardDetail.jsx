@@ -88,20 +88,21 @@ function CardDetail() {
                       </div>
                     </div>
                     <div className='col-12 mt-4'>
-                      <div className='col'>
+                      <div className='col-12'>
                         <h2 className='borders-heading'>Border Co-untries:</h2>
                       </div>
-                      <div className='col-12 mb-5 mt-3 d-flex justify-content-between'>
+                      <div className='col-12  mb-5 mt-3 d-flex justify-content-between'>
                         {borders &&
                           borders.map((borderCountry) => {
                             return (
-                              <div className='col-3 link-container d-flex justify-content-center align-items-center border border-link'>
-                                <Link
-                                  key={borderCountry}
-                                  to={`/borders/${borderCountry}`}
-                                >
-                                  {borderCountry}
-                                </Link>
+                              <div className='container' key={borderCountry}>
+                                <div className='row d-flex'>
+                                  <div className='col-12 col-md-6 link-container d-flex justify-content-center align-items-center border border-link'>
+                                    <Link to={`/borders/${borderCountry}`}>
+                                      {borderCountry}
+                                    </Link>
+                                  </div>
+                                </div>
                               </div>
                             )
                           })}

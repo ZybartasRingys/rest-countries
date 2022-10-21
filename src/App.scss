@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
 .App {
   text-align: center;
 }
@@ -35,10 +37,11 @@ main {
 }
 
 .border-link {
+  // width: 98px !important;
+  // height: 28px !important;
   font-size: 10px;
   text-align: center;
-
-  margin-right: 6px;
+  margin-right: 7px;
 
   a {
     text-decoration: none;
