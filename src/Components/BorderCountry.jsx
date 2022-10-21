@@ -70,9 +70,9 @@ function BorderCountry() {
                     {borders &&
                       borders.map((borderCountry) => {
                         return (
-                          <div className='col-3 link-container d-flex justify-content-center align-items-center'>
+                          <div className='col-3 link-container d-flex justify-content-center align-items-center border'>
                             <Link
-                              className='back-link'
+                              className='border-link '
                               key={borderCountry}
                               to={`/borders/${borderCountry}`}
                             >

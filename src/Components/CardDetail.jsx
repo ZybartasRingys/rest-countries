@@ -45,10 +45,10 @@ function CardDetail() {
                       />
                     </div>
                   </div>
-                  <div className='col-11 col-md-6 px-3'>
-                    <div className='col-12 d-flex flex-column flex-md-row border'>
-                      <div className='col-6 '>
-                        <h2 className='mb-4'>{name}</h2>
+                  <div className='col-12 col-md-6 px-3'>
+                    <div className='col-12 d-flex flex-column flex-md-row'>
+                      <div className='col-8 col-md-6  '>
+                        <h2 className='mb-4 '>{name}</h2>
                         <p>
                           <span className='bold'>Native name:</span>
                           {nativeName}
@@ -70,7 +70,7 @@ function CardDetail() {
                           {capital}
                         </p>
                       </div>
-                      <div className='col-12 mt-5'>
+                      <div className='col-12 mt-4'>
                         <p>
                           <span className='bold'>Top Level Domain:</span>
                           {topLevelDomain}
@@ -91,13 +91,12 @@ function CardDetail() {
                       <div className='col'>
                         <h2 className='borders-heading'>Border Co-untries:</h2>
                       </div>
-                      <div className='col-12 mb-5 mt-4 d-flex justify-content-between'>
+                      <div className='col-12 mb-5 mt-3 d-flex justify-content-between'>
                         {borders &&
                           borders.map((borderCountry) => {
                             return (
-                              <div className='col-3 link-container d-flex justify-content-center align-items-center'>
+                              <div className='col-3 link-container d-flex justify-content-center align-items-center border border-link'>
                                 <Link
-                                  className='back-link'
                                   key={borderCountry}
                                   to={`/borders/${borderCountry}`}
                                 >
