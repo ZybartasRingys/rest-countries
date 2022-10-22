@@ -19,16 +19,35 @@ p {
   font-size: 12px;
 }
 
-@media only screen and (min-width: 767px) and (max-width: 1224px) {
+@media only screen and (max-width: 768px) {
   .card-detail-container {
     margin-top: 50px;
   }
 
-  .detail-card-image {
-    width: 560px;
-    height: 401px;
+  .top-level {
+    margin-top: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1224px) {
+  .card-detail-container {
+    margin-top: 50px;
+  }
+
+  .top-level {
+    margin: 0 !important;
   }
 }
 
 @media only screen and (min-width: 1224px) and (max-width: 1800px) {
+  .detail-card-container {
+    margin-top: 70px;
+  }
+  .detail-card-text {
+    margin-top: 90px;
+  }
+
+  .country-name {
+    margin-top: 20px;
+  }
 }
