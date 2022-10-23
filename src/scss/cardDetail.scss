@@ -1,9 +1,15 @@
+@import "./variables";
+
 .bold {
   font-size: 14px !important;
   line-height: 16px;
   color: #111517;
   margin-right: 6px;
   font-weight: bold;
+}
+
+#dark .bold {
+  color: $White;
 }
 
 .borders-heading {
@@ -37,9 +43,14 @@ p {
   .top-level {
     margin: 0 !important;
   }
+
+  .detail-card-image {
+    width: 560px;
+    height: 401px;
+  }
 }
 
-@media only screen and (min-width: 1224px) and (max-width: 1800px) {
+@media only screen and (min-width: 1224px) and (max-width: 1899px) {
   .detail-card-container {
     margin-top: 70px;
   }
@@ -47,7 +58,16 @@ p {
     margin-top: 90px;
   }
 
+  .detail-card-image {
+    width: 560px;
+    height: 401px;
+  }
+
   .country-name {
+    margin-top: 20px;
+  }
+
+  .top-level {
     margin-top: 20px;
   }
 }

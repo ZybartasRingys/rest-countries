@@ -41,7 +41,7 @@ function CardDetail() {
                       </Link>
                     </div>
 
-                    <div className="col-12 col-md-11  mb-5">
+                    <div className="col-12 col-md-11 d-flex justify-content-center align-items-center  mb-5">
                       <img
                         className="detail-card-image"
                         src={flag}

@@ -1,21 +1,56 @@
+@import "./variables";
+
 .form-select {
-  height: 48px;
+  height: 56px;
 }
 
 .form-control {
+  height: 56px;
   border: none !important;
-  outline: none !important;
 }
 
 .form-control:focus {
-  border-color: inherit;
-  -webkit-box-shadow: none;
-  box-shadow: none;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.form-select:focus {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .search-inputs {
   border-radius: 5px;
 }
+
+.icon {
+  margin-top: 14px;
+  margin-right: 15px;
+  margin-left: 25px;
+}
+// Light dark Mode
+
+#dark .icon {
+  background-color: $DarkBlue;
+}
+
+#dark .search-inputs {
+  border: none !important;
+  background-color: $DarkBlue !important;
+}
+
+#dark .search-icon {
+  fill: white !important;
+}
+
+#dark .form-select {
+  background-color: $DarkBlue;
+  color: $White;
+  border: none;
+  fill: $White;
+}
+
 /* mobile  */
 @media only screen and (max-width: 767px) {
   .country-input {
@@ -35,11 +70,14 @@
   .form-select {
     margin-top: 48px;
   }
+
+  .form-control {
+    height: 48px;
+  }
 }
 
-@media only screen and (min-width: 1224px) and (max-width: 1440px) {
-  .form-select {
-    height: 38px !important;
-    margin-top: 48px;
+@media only screen and (min-width: 1224px) and (max-width: 1899px) {
+  .form-control {
+    height: 48px;
   }
 }

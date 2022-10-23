@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+@import "./scss//variables";
 
 .App {
   text-align: center;
@@ -49,4 +50,27 @@ main {
       color: black;
     }
   }
+}
+
+// Light dark Mode
+
+#light {
+  background-color: $White;
+}
+
+#dark {
+  background-color: $VeryDarkBlue;
+}
+
+#dark .country-card {
+  background-color: $DarkBlue;
+  color: $White;
+}
+
+#dark .card-title {
+  color: $White;
+}
+
+#dark .search-inputs .search-input {
+  background-color: $DarkBlue;
 }

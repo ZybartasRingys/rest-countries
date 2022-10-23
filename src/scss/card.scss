@@ -1,4 +1,4 @@
-@import './variables';
+@import "./variables";
 
 /* Card */
 
@@ -31,7 +31,7 @@
 .card-body {
   .card-title {
     text-align: left;
-    font-family: 'Nunito Sans';
+    font-family: "Nunito Sans";
     font-style: normal;
     font-weight: 800;
     font-size: 18px;
@@ -40,7 +40,7 @@
   }
   .card-text {
     text-align: left;
-    font-family: 'Nunito Sans';
+    font-family: "Nunito Sans";
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -67,12 +67,6 @@
 .country-input {
   height: 48px;
   border-radius: 5px;
-}
-
-.icon {
-  margin-top: 10px;
-  margin-right: 20px;
-  margin-left: 30px;
 }
 
 .detail-card-image {

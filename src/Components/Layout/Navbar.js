@@ -1,26 +1,26 @@
-import React from 'react'
-import '../../scss/navbar.scss'
-import { BsMoon } from 'react-icons/bs'
-import { useContext } from 'react'
-import { Context } from '../../Context/StateContext'
+import React from "react";
+import "../../scss/navbar.scss";
+import { FaMoon } from "react-icons/fa";
+import { useContext } from "react";
+import { Context } from "../../Context/StateContext";
 
 function Navbar() {
-  const { darkMode } = useContext(Context)
+  const { toggleTheme } = useContext(Context);
   return (
     <header>
-      <div className='container-fluid navigation shadow-sm bg-white rounded'>
-        <div className='row nav-row'>
-          <div className='col-12 col-xxl-11 navigation-col  mx-auto d-flex justify-content-between align-items-center'>
-            <div className='col-6'>
-              <a className='where' href='/'>
+      <div className="container-fluid navigation shadow-sm border rounded">
+        <div className="row nav-row ">
+          <div className="col-12 col-xxl-12 navigation-col mx-auto d-flex justify-content-between align-items-center">
+            <div className="col-5 d-flex justify-content-start">
+              <a className="where" href="/">
                 Where in the world?
               </a>
             </div>
-            <div className='col-5 d-flex justify-content-end dark-mode'>
-              <span className='moon'>
-                <BsMoon size='xs' />
+            <div className="col-6 d-flex justify-content-end dark-mode">
+              <span className="moon">
+                <FaMoon className="moon-icon " />
               </span>
-              <h2 className='dark' onClick={darkMode}>
+              <h2 className="dark" onClick={toggleTheme}>
                 Dark Mode
               </h2>
             </div>
@@ -28,7 +28,7 @@ function Navbar() {
         </div>
       </div>
     </header>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

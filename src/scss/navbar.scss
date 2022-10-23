@@ -1,4 +1,5 @@
-@import './variables';
+@import "./variables";
+@import "../App.scss";
 
 .navigation {
   height: 80px;
@@ -33,6 +34,22 @@
     margin-right: 5px;
     cursor: pointer;
   }
+}
+
+// Light dark Mode
+
+#dark .dark {
+  color: $White !important;
+}
+
+#dark .where {
+  color: $White !important;
+}
+
+#dark .navigation {
+  background-color: $DarkBlue;
+  border: none !important;
+  color: $White;
 }
 
 /* mobile  */
