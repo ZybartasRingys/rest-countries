@@ -33,15 +33,15 @@ function CardDetail() {
               key={numericCode}
             >
               <div className="row d-flex  justify-content-center">
-                <div className="col-12 col-md-12 d-flex flex-column  flex-md-column flex-xl-row justify-content-center  align-items-center ">
-                  <div className="col-11 col-md-11 col-xxl-6 d-flex flex-column justify-content-center mt-4">
-                    <div className="back-link mb-5">
+                <div className="col-12 col-md-12 col-xl-12 d-flex flex-column border flex-md-column flex-xl-row justify-content-center  align-items-center ">
+                  <div className="col-11 col-md-11 col-lg-11 border d-flex flex-column  mt-4">
+                    <div className="col-3 col-md-3 border back-link mb-5">
                       <Link className="back-link-link" to="/">
                         <AiOutlineArrowLeft /> Back
                       </Link>
                     </div>
 
-                    <div className="col-12 col-md-11 d-flex justify-content-center align-items-center  mb-5">
+                    <div className="col-12 col-md-11 col-xl-12 border  d-flex justify-content-center align-items-center  mb-5">
                       <img
                         className="detail-card-image"
                         src={flag}
@@ -49,7 +49,7 @@ function CardDetail() {
                       />
                     </div>
                   </div>
-                  <div className="col-12 col-md-11 col-xxl-5 px-3 d-flex flex-column detail-card-text ">
+                  <div className="col-11 col-md-11 col-lg-11 border  d-flex flex-column detail-card-text ">
                     <div className="col-12 col-md-6 col-xxl-10  d-flex flex-column flex-md-row align-items-md-center align-items-xl-center ">
                       <div className="col-8 col-md-8 col-xxl-7 ">
                         <h2 className="mb-4 country-name ">{name}</h2>
@@ -91,8 +91,8 @@ function CardDetail() {
                         </div>
                       </div>
                     </div>
-                    <div className="col-6 col-md-12 mt-4 d-flex flex-column flex-xl-row">
-                      <div className="col-12 col-md-12 p-1 col-xl-4 ">
+                    <div className="col-6 col-md-12 mt-5  d-flex flex-column flex-xl-row">
+                      <div className="col-12 col-md-12 border p-1 col-xl-4 ">
                         <h2 className="borders-heading">Border Co-untries:</h2>
                       </div>
 

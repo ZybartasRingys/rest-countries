@@ -34,7 +34,7 @@ function BorderCountry() {
             key={numericCode}
           >
             <div className="row d-flex  justify-content-center">
-              <div className="col-12 col-md-12 d-flex flex-column  flex-md-column flex-xl-row justify-content-center  align-items-center ">
+              <div className="col-12 col-md-12 col-xl-12 d-flex flex-column  flex-md-column flex-xl-row justify-content-center  align-items-center ">
                 <div className="col-11 col-md-11 col-xxl-6 d-flex flex-column justify-content-center mt-4">
                   <div className="back-link mb-5">
                     <Link className="back-link-link" to="/">
@@ -88,16 +88,16 @@ function BorderCountry() {
                       </div>
                     </div>
                   </div>
-                  <div className="col-6 col-md-12 mt-4 d-flex flex-column flex-xl-row">
-                    <div className="col-12 col-md-12 p-1 col-xl-3">
+                  <div className="col-12 col-md-3 mt-4 d-flex flex-column flex-xl-row">
+                    <div className="col-12 col-md-12 col-xl-7">
                       <h2 className="borders-heading">Border Co-untries:</h2>
                     </div>
 
-                    <div className="col-12 col-md-12 col-xl-12 d-flex">
+                    <div className="col-12 col-md-12 col-xl-12 d-flex mb-5 border ">
                       {borders &&
                         borders.map((borderCountry) => {
                           return (
-                            <div className="col-5 col-md-2 col-xl-1 border mb-2 link-container d-flex  justify-content-center align-items-center  border-link">
+                            <div className="col-3 col-md-4 col-xl-2 border mb-2 link-container d-flex  justify-content-center align-items-center  border-link">
                               <Link
                                 className="border-link-text"
                                 to={`/borders/${borderCountry}`}
