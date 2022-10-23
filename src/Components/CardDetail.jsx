@@ -33,15 +33,15 @@ function CardDetail() {
               key={numericCode}
             >
               <div className="row d-flex  justify-content-center">
-                <div className="col-12 col-md-12 col-xl-12 d-flex flex-column border flex-md-column flex-xl-row justify-content-center  align-items-center ">
-                  <div className="col-11 col-md-11 col-lg-11 border d-flex flex-column  mt-4">
+                <div className="col-12 col-md-12 col-lg-12 d-flex flex-column border flex-md-column flex-xl-row justify-content-center  align-items-center ">
+                  <div className="col-11 col-md-11 col-lg-5 d-flex flex-column  mt-4">
                     <div className="col-3 col-md-3 border back-link mb-5">
                       <Link className="back-link-link" to="/">
                         <AiOutlineArrowLeft /> Back
                       </Link>
                     </div>
 
-                    <div className="col-12 col-md-11 col-xl-12 border  d-flex justify-content-center align-items-center  mb-5">
+                    <div className="col-12 col-md-11 col-lg-12 border  d-flex justify-content-center align-items-center  mb-5">
                       <img
                         className="detail-card-image"
                         src={flag}
@@ -49,9 +49,9 @@ function CardDetail() {
                       />
                     </div>
                   </div>
-                  <div className="col-11 col-md-11 col-lg-11 border  d-flex flex-column detail-card-text ">
-                    <div className="col-12 col-md-6 col-xxl-10  d-flex flex-column flex-md-row align-items-md-center align-items-xl-center ">
-                      <div className="col-8 col-md-8 col-xxl-7 ">
+                  <div className="col-11 col-md-11 col-lg-5 border  d-flex flex-column detail-card-text ">
+                    <div className="col-12 col-md-6  d-flex flex-column flex-md-row align-items-md-center align-items-xl-center ">
+                      <div className="col-8 col-md-8  ">
                         <h2 className="mb-4 country-name ">{name}</h2>
                         <p>
                           <span className="bold">Native name:</span>

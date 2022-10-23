@@ -10,6 +10,7 @@ export const ContextProvider = ({ children }) => {
   const inputRef = useRef();
   const regionRef = useRef();
   const [theme, setTheme] = useState("light");
+  const [isLoading, setIsLoading] = useState(false);
 
   /*  Country data endpoint  */
   const baseURL = "https://restcountries.com/v2/all";
@@ -63,11 +64,12 @@ export const ContextProvider = ({ children }) => {
     const selectValue = regionRef.current.value;
     if (selectValue.trim()) {
       const fetchSelect = async () => {
+        setIsLoading(true);
         const response = await fetch(
           `https://restcountries.com/v2/region/${selectValue}`
         );
         const data = await response.json();
-
+        setIsLoading(false);
         if (selectValue === "All") {
           try {
             fetchCountries();
@@ -105,6 +107,8 @@ export const ContextProvider = ({ children }) => {
         toggleTheme,
         theme,
         setTheme,
+        isLoading,
+        setIsLoading,
       }}
     >
       {children}
