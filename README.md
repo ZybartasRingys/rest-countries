@@ -3,7 +3,7 @@
 
 ### The challenge
 
-Better version of project built with React, axios, react context, bootstrap.
+Frontend mentor rest-countries project old vanilla version remake with React.
 
 ### Screenshot
 
@@ -11,14 +11,13 @@ Better version of project built with React, axios, react context, bootstrap.
 
 ### Links
 
-https://coffeeroasters-subscription-site-byzr.netlify.app/
+https://rest-countries-react-byzr.netlify.app/
 
 ## My process
 
 ### Built with
 
 - Mobile-first workflow
-- Semantic HTML5 markup
 - SCSS
 - Bootstrap
 - Javascript
@@ -26,5 +25,6 @@ https://coffeeroasters-subscription-site-byzr.netlify.app/
 
 ### What I learned
 
-1) My first project with mobile first development.
-2) My first big project where i have used bootstrap.
+1) I have learned React Layout, React Router, Fetch data with Axios.
+2) Project State management with React Context.
+3) Dark mode implementation with State. 
