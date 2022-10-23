@@ -25,7 +25,7 @@
     color: $VeryDarkBlue2;
     cursor: pointer;
     margin-bottom: 0;
-    margin-top: 7px;
+    margin-top: 3px;
   }
 
   .moon {
@@ -33,6 +33,14 @@
     height: 16px;
     margin-right: 5px;
     cursor: pointer;
+  }
+
+  .dark {
+    margin-right: 70px;
+  }
+
+  .where {
+    margin-left: 70px;
   }
 }
 
@@ -61,6 +69,15 @@
 
   .country-input {
     margin-top: 30px;
+  }
+
+  .dark {
+    font-size: 13px;
+    margin-right: 13px !important;
+  }
+
+  .where {
+    margin-left: 13px !important;
   }
 }
 

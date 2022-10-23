@@ -36,7 +36,7 @@ function CardDetail() {
                 <div className="col-12 col-md-12 d-flex flex-column  flex-md-column flex-xl-row justify-content-center  align-items-center ">
                   <div className="col-11 col-md-11 col-xxl-6 d-flex flex-column justify-content-center mt-4">
                     <div className="back-link mb-5">
-                      <Link to="/">
+                      <Link className="back-link-link" to="/">
                         <AiOutlineArrowLeft /> Back
                       </Link>
                     </div>
@@ -102,7 +102,10 @@ function CardDetail() {
                             borders.map((borderCountry) => {
                               return (
                                 <div className="col-5 col-md-2 col-xl-7 border mb-2 link-container d-flex  justify-content-center align-items-center  border-link">
-                                  <Link to={`/borders/${borderCountry}`}>
+                                  <Link
+                                    className="border-link-text"
+                                    to={`/borders/${borderCountry}`}
+                                  >
                                     {borderCountry}
                                   </Link>
                                 </div>
@@ -117,6 +120,7 @@ function CardDetail() {
             </div>
           );
         }
+        return null;
       }
     )
   );

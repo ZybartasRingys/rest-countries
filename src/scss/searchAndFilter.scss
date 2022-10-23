@@ -18,6 +18,7 @@
 .form-select:focus {
   outline: none !important;
   box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 .search-inputs {
@@ -51,14 +52,14 @@
   fill: $White;
 }
 
+#dark .form-control {
+  color: $White;
+}
+
 /* mobile  */
 @media only screen and (max-width: 767px) {
   .country-input {
     margin-top: 30px;
-  }
-
-  .dark {
-    font-size: 12px !important;
   }
 
   .form-select {

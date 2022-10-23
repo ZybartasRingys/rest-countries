@@ -9,13 +9,13 @@ function Card() {
 
   return (
     <>
-      <div className="container d-flex">
+      <div className="container">
         <div className="row d-flex justify-content-center">
           {!noCountries ? (
             countries.map(
               ({ name, numericCode, flag, population, region, capital }) => (
                 <div
-                  className="col-12 col-md-6 col-xl-3 d-flex justify-content-center"
+                  className="col-12 col-md-6 col-xl-3 d-flex justify-content-center align-items-center"
                   key={numericCode}
                 >
                   <Link className="link" to={`/${name}`}>
@@ -41,7 +41,9 @@ function Card() {
               )
             )
           ) : (
-            <p>No countries found...</p>
+            <div className="no-countries-container ">
+              <h3 className="no-countries">No countries found...</h3>
+            </div>
           )}
         </div>
       </div>
