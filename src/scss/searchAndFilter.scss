@@ -1,4 +1,4 @@
-@import "./variables";
+@import './variables';
 
 .form-select {
   height: 56px;
@@ -23,6 +23,10 @@
 
 .search-inputs {
   border-radius: 5px;
+
+  .search-input {
+    margin-top: 5px;
+  }
 }
 
 .icon {
