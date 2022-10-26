@@ -1,5 +1,5 @@
-@import "./variables";
-@import "../App.scss";
+@import './variables';
+@import '../App.scss';
 
 .navigation {
   height: 80px;
@@ -34,14 +34,6 @@
     margin-right: 5px;
     cursor: pointer;
   }
-
-  .dark {
-    margin-right: 70px;
-  }
-
-  .where {
-    margin-left: 70px;
-  }
 }
 
 // Light dark Mode
@@ -73,16 +65,14 @@
 
   .dark {
     font-size: 13px;
-    margin-right: 13px !important;
-  }
-
-  .where {
-    margin-left: 13px !important;
   }
 }
 
 /*  tablet  */
 @media only screen and (min-width: 768px) and (max-width: 1223px) {
+  .country-input {
+    margin-top: 48px;
+  }
 }
 
 /* desktop */
