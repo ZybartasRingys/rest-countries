@@ -45,7 +45,8 @@ p {
 // Light dark Mode
 
 #dark .detail-card-container {
-  height: 90vh !important;
+  height: 100% !important;
+  background-color: $VeryDarkBlue;
 }
 
 #dark p {
@@ -83,7 +84,7 @@ p {
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1224px) {
+@media only screen and (min-width: 768px) and (max-width: 992px) {
   .card-detail-container {
     margin-top: 50px;
   }
@@ -93,7 +94,7 @@ p {
   }
 }
 
-@media only screen and (min-width: 1224px) {
+@media only screen and (min-width: 992px) {
   .detail-card-container {
     margin-top: 70px;
   }

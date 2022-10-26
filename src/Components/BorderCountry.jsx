@@ -28,9 +28,6 @@ function BorderCountry() {
         languages,
       } = country
       if (id === alpha3Code) {
-        {
-          console.log(flag)
-        }
         return (
           <div
             className='container-fluid detail-card-container'
@@ -38,28 +35,24 @@ function BorderCountry() {
           >
             <div className='row d-flex  justify-content-center'>
               {/* Main Col */}
-              <div className='col-12 col-md-10 col-lg-12 d-flex flex-column flex-md-column flex-xl-row justify-content-center  align-items-center '>
+              <div className='col-12 col-md-10 col-lg-12 col-xl-11 d-flex flex-column flex-md-column flex-xl-row justify-content-center  align-items-center '>
                 {/* Back link and flag image */}
-                <div className='col-11 col-md-11 col-lg-8 col-xl-5 d-flex flex-column border  mt-4'>
-                  <div className='col-3 col-md-3 back-link mb-5 border '>
+                <div className='col-11 col-md-11 col-lg-10 col-xl-6 d-flex flex-column mt-4'>
+                  <div className='col-3 col-md-3 back-link mb-5'>
                     <Link className='back-link-link' to='/'>
                       <AiOutlineArrowLeft /> Back
                     </Link>
                   </div>
 
-                  <div className='col-12 col-md-12 col-lg-12 col-xl-11 col-xxl-11 border d-flex justify-content-center align-items-center mb-5'>
-                    <img
-                      className='detail-card-image border'
-                      src={flag}
-                      alt={name}
-                    />
+                  <div className='col-12 col-md-12 col-lg-12 col-xl-11 col-xxl-11 border rounded d-flex justify-content-center align-items-center  mb-5'>
+                    <img className='detail-card-image' src={flag} alt={name} />
                   </div>
                 </div>
 
                 {/* Back button and image end */}
 
                 {/* Country card text  */}
-                <div className='col-11 col-md-11 col-lg-8 col-xl-6 col-xxl-5  d-flex flex-column detail-card-text '>
+                <div className='col-11 col-md-11 col-lg-10 col-xl-5 col-xxl-5  d-flex flex-column detail-card-text '>
                   <div className='col-12 col-md-9 col-lg-8 d-flex flex-column flex-md-row align-items-md-center align-items-xl-center '>
                     <div className='col-8 col-md-8'>
                       <h2 className='mb-3 country-name '>{name}</h2>
@@ -112,9 +105,6 @@ function BorderCountry() {
                       <div className='col-12 col-md-12 col-xl-12 d-flex'>
                         {borders &&
                           borders.map((borderCountry, index) => {
-                            {
-                              console.log(borderCountry)
-                            }
                             return (
                               <div
                                 className='col-5 col-md-2 col-xl-7 border mb-2 link-container d-flex  justify-content-center align-items-center  border-link'

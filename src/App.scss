@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
-@import "./scss//variables";
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+@import './scss//variables';
 
 .App {
   text-align: center;
@@ -38,6 +38,10 @@ main {
 }
 
 // Light dark Mode
+
+#dark .html {
+  background-color: $VeryDarkBlue;
+}
 
 #light {
   background-color: $White;

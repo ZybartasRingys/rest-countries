@@ -27,9 +27,6 @@ function CardDetail() {
         languages,
       }) => {
         if (id === name) {
-          {
-            console.log(flag)
-          }
           return (
             <div
               className='container-fluid detail-card-container'
