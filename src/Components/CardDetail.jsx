@@ -45,7 +45,7 @@ function CardDetail() {
 
                     <div className='col-12 col-md-12 col-lg-12 col-xl-11 col-xxl-11 d-flex justify-content-center align-items-center  mb-5'>
                       <img
-                        className='detail-card-image '
+                        className='detail-card-image borderb'
                         src={flags.png}
                         alt={name}
                       />
@@ -97,20 +97,19 @@ function CardDetail() {
                         </div>
                       </div>
                     </div>
-                    <div className='col-6 col-md-12 mt-5  d-flex flex-column flex-xl-row'>
-                      <div className='col-12 col-md-12 p-1 col-xl-4 '>
+                    <div className='col-12 col-md-12  mt-5  d-flex flex-column flex-xl-row'>
+                      <div className='col-12 col-md-12 col-lg-12 col-xl-3 p-1 col-xxl-3  '>
                         <h2 className='borders-heading'>Border Co-untries:</h2>
                       </div>
-
                       {/* Borders container */}
 
-                      <div className='row d-flex mb-5 p-1 '>
-                        <div className='col-12 col-md-12 col-xl-12 d-flex'>
+                      <div className='col-12 col-xl-8'>
+                        <div className='row borders-row '>
                           {borders &&
                             borders.map((borderCountry, index) => {
                               return (
                                 <div
-                                  className='col-5 col-md-2 col-xl-7 border mb-2 link-container d-flex  justify-content-center align-items-center  border-link 
+                                  className='col-2 col-md-2 col-xl-2 mb-2 link-container d-flex flex-xxl-row justify-content-center align-items-center border-link border
                                 '
                                   key={index}
                                 >
@@ -125,6 +124,7 @@ function CardDetail() {
                             })}
                         </div>
                       </div>
+
                       {/* Borders container */}
                     </div>
                   </div>
