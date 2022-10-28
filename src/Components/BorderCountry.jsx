@@ -13,7 +13,7 @@ function BorderCountry() {
     countries &&
     countries?.map((country) => {
       const {
-        flag,
+        flags,
         name,
         numericCode,
         topLevelDomain,
@@ -44,8 +44,12 @@ function BorderCountry() {
                     </Link>
                   </div>
 
-                  <div className='col-12 col-md-12 col-lg-12 col-xl-11 col-xxl-11 border rounded d-flex justify-content-center align-items-center  mb-5'>
-                    <img className='detail-card-image' src={flag} alt={name} />
+                  <div className='col-12 col-md-12 col-lg-11 col-xl-11 col-xxl-10  rounded d-flex justify-content-center align-items-center  mb-5'>
+                    <img
+                      className='detail-card-image border'
+                      src={flags.png}
+                      alt={name}
+                    />
                   </div>
                 </div>
 

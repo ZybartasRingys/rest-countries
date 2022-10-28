@@ -12,6 +12,10 @@ export const ContextProvider = ({ children }) => {
   const [theme, setTheme] = useState('light')
   const [isLoading, setIsLoading] = useState(false)
 
+  {
+    console.log(countries)
+  }
+
   /*  Country data endpoint  */
   const baseURL = 'https://restcountries.com/v2/all'
 

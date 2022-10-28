@@ -13,7 +13,7 @@ function CardDetail() {
     countries &&
     countries.map(
       ({
-        flag,
+        flags,
         name,
         numericCode,
         topLevelDomain,
@@ -43,10 +43,10 @@ function CardDetail() {
                       </Link>
                     </div>
 
-                    <div className='col-12 col-md-12 col-lg-12 col-xl-11 col-xxl-11 d-flex justify-content-center   align-items-center  mb-5'>
+                    <div className='col-12 col-md-12 col-lg-12 col-xl-11 col-xxl-11 d-flex justify-content-center align-items-center  mb-5'>
                       <img
-                        className='detail-card-image border'
-                        src={flag}
+                        className='detail-card-image '
+                        src={flags.png}
                         alt={name}
                       />
                     </div>

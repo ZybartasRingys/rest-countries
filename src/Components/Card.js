@@ -13,7 +13,7 @@ function Card() {
         <div className='row d-flex justify-content-center'>
           {!noCountries ? (
             countries.map(
-              ({ name, numericCode, flag, population, region, capital }) => (
+              ({ name, numericCode, flags, population, region, capital }) => (
                 <div
                   className='col-12 col-md-6 col-xl-3 d-flex justify-content-center align-items-center'
                   key={numericCode}
@@ -21,7 +21,7 @@ function Card() {
                   <Link className='link' to={`/${name}`}>
                     <div className='card country-card shadow  mb-5  rounded'>
                       <div className='card-image'>
-                        <img className='image' src={flag} alt='flag' />
+                        <img className='image' src={flags.png} alt='flag' />
                       </div>
                       <div className='card-body text-left mb-3'>
                         <h5 className='card-title mb-4 mt-2'>{name}</h5>

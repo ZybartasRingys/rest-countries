@@ -7,7 +7,7 @@
 
 main {
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 .link {
@@ -53,11 +53,6 @@ main {
 
 #dark .main {
   background-color: $VeryDarkBlue;
-  height: 100vh !important;
-}
-
-#dark .main-root {
-  height: 100vh !important;
 }
 
 #dark .country-card {
