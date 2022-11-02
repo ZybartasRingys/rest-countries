@@ -1,30 +1,26 @@
-import React, { createContext, useState, useEffect, useRef } from 'react'
-import axios from 'axios'
+import React, { createContext, useState, useEffect, useRef } from "react";
+import axios from "axios";
 
-export const Context = createContext()
+export const Context = createContext();
 
 export const ContextProvider = ({ children }) => {
-  const [countries, setCountries] = useState([])
-  const [filtered, setFiltered] = useState([])
-  const [filteredCountryRegion, setFilteredCountryRegion] = useState('All')
-  const inputRef = useRef()
-  const regionRef = useRef()
-  const [theme, setTheme] = useState('light')
-  const [isLoading, setIsLoading] = useState(false)
-
-  {
-    console.log(countries)
-  }
+  const [countries, setCountries] = useState([]);
+  const [filtered, setFiltered] = useState([]);
+  const [filteredCountryRegion, setFilteredCountryRegion] = useState("All");
+  const inputRef = useRef();
+  const regionRef = useRef();
+  const [theme, setTheme] = useState("light");
+  const [isLoading, setIsLoading] = useState(false);
 
   /*  Country data endpoint  */
-  const baseURL = 'https://restcountries.com/v2/all'
+  const baseURL = "https://restcountries.com/v2/all";
 
-  const noCountries = countries.status || countries.message
+  const noCountries = countries.status || countries.message;
 
   /* A hook that is used to fetch data. */
   useEffect(() => {
-    fetchCountries()
-  }, [])
+    fetchCountries();
+  }, []);
 
   /**
    * When the component mounts, fetch the data from the API and set the state of the countries array to
@@ -32,16 +28,16 @@ export const ContextProvider = ({ children }) => {
    */
   const fetchCountries = () => {
     axios.get(baseURL).then((response) => {
-      setCountries(response.data)
-    })
-  }
+      setCountries(response.data);
+    });
+  };
 
   /**
    * If the current theme is light, set the theme to dark, otherwise set the theme to light.
    */
   const toggleTheme = () => {
-    setTheme((curr) => (curr === 'light' ? 'dark' : 'light'))
-  }
+    setTheme((curr) => (curr === "light" ? "dark" : "light"));
+  };
 
   /**
    * It takes the value of the input field, and if it's not empty, it fetches the data from the API and
@@ -49,57 +45,57 @@ export const ContextProvider = ({ children }) => {
    * the state to the data.
    */
   const searchCountries = () => {
-    const searchValue = inputRef.current.value
+    const searchValue = inputRef.current.value;
     if (searchValue.trim()) {
       const fetchSearch = async () => {
         const response = await fetch(
           `https://restcountries.com/v2/name/${searchValue}`
-        )
-        const data = await response.json()
-        setCountries(data)
-      }
+        );
+        const data = await response.json();
+        setCountries(data);
+      };
       try {
-        fetchSearch()
+        fetchSearch();
       } catch (error) {
-        console.log(error)
+        console.log(error);
       }
     } else {
-      fetchCountries()
+      fetchCountries();
     }
-  }
+  };
 
   /**
    * It fetches the data from the API and sets the state of the countries to the data fetched.
    */
   const filteredByRegion = () => {
-    const selectValue = regionRef.current.value
+    const selectValue = regionRef.current.value;
     if (selectValue.trim()) {
       const fetchSelect = async () => {
-        setIsLoading(true)
+        setIsLoading(true);
         const response = await fetch(
           `https://restcountries.com/v2/region/${selectValue}`
-        )
-        const data = await response.json()
-        setIsLoading(false)
-        if (selectValue === 'All') {
+        );
+        const data = await response.json();
+        setIsLoading(false);
+        if (selectValue === "All") {
           try {
-            fetchCountries()
+            fetchCountries();
           } catch (error) {
-            console.log(error)
+            console.log(error);
           }
-          return
+          return;
         }
 
-        setCountries(data)
-      }
+        setCountries(data);
+      };
 
       try {
-        fetchSelect()
+        fetchSelect();
       } catch (error) {
-        console.log(error)
+        console.log(error);
       }
     }
-  }
+  };
 
   return (
     <Context.Provider
@@ -124,5 +120,5 @@ export const ContextProvider = ({ children }) => {
     >
       {children}
     </Context.Provider>
-  )
-}
+  );
+};

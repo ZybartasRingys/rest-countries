@@ -1,4 +1,4 @@
-@import './variables';
+@import "./variables";
 
 .bold {
   font-size: 14px !important;
@@ -40,6 +40,11 @@ p {
   width: 100%;
   height: 100%;
   border-radius: 10px;
+}
+
+.main-detail-container {
+  height: 100%;
+  padding-bottom: 300px;
 }
 
 .borders-row {
@@ -86,6 +91,10 @@ p {
     margin-top: 50px;
   }
 
+  .main-detail-container {
+    padding-bottom: 30px;
+  }
+
   .top-level {
     margin-top: 1.5rem;
   }
@@ -94,6 +103,10 @@ p {
 @media only screen and (min-width: 768px) and (max-width: 992px) {
   .card-detail-container {
     margin-top: 50px;
+  }
+
+  .main-detail-container {
+    padding-bottom: 180px;
   }
 
   .top-level {
@@ -106,7 +119,7 @@ p {
     margin-top: 70px;
   }
   .detail-card-text {
-    margin-top: 90px;
+    margin-top: 50px;
   }
 
   .country-name {
